@@ -1,0 +1,27 @@
+{
+  "name": "bux.js",
+  "version": "1.0.0",
+  "description": "bux.js is a JavaScript library that you can include like every other JavaScript file via HTML. It will greatly improve the UX for your customer based on how nice you think your customer is.",
+  "main": "src/bux.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/riesenacht/bux.js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/riesenacht/bux.js/issues"
+  },
+  "homepage": "https://github.com/riesenacht/bux.js#readme",
+  "devDependencies": {
+    "ts-loader": "^9.3.0",
+    "typescript": "^4.6.4",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2"
+  }
+}

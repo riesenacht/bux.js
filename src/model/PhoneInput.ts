@@ -7,16 +7,29 @@ export class PhoneInput extends BasicInput {
         let div = document.createElement("div");
 
         let phoneInput = document.createElement("input");
+        phoneInput.classList.add("bux-input");
         phoneInput.type = "range";
-        phoneInput.min = "1000000000";
+        phoneInput.min = "0100000000";
         phoneInput.max = "9999999999";
         this.setElement(phoneInput);
 
         this.output.classList.add("html-input-output");
 
-        div.innerHTML = "New Phone Element: " + phoneInput.outerHTML + this.output.outerHTML;
+        div.append(phoneInput);
+        div.append(this.output);
+        this.updateOutput();
 
         return div;
+    }
+
+    setListeners(): void {
+        this.getElement().addEventListener("input", () => {
+            this.updateOutput();
+        });
+    }
+
+    updateOutput() {
+        this.output.textContent = this.getElement().value;
     }
 
     onChange() {

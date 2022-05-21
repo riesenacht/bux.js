@@ -9,8 +9,7 @@ export class BasicInput {
 
     getNewHtml(): HTMLElement {
         let div = document.createElement("div");
-        div.textContent = "Replaced '" + this.element.type + "'-Element Here: ";
-        div.innerHTML = div.textContent + this.element.outerHTML;
+        div.innerHTML = "Replaced " + this.element.outerHTML;
         return div;
     }
 

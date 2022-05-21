@@ -17,11 +17,9 @@ onReady(() => {
 function convertElemens(inputModels: any) {
     inputModels.forEach((inputModel: BasicInput) => {
         let html = inputModel.getNewHtml();
-        console.log(html);
         inputModel.getInitialElement().replaceWith(html);
 
         onReady(() => {
-            //TODO not working, fix
             inputModel.setListeners();
         });
     });

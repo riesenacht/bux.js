@@ -26,7 +26,7 @@ export class PhoneInput extends BasicInput {
                 phoneInput.value = "" + (parseInt(phoneInput.value) + 1);
                 this.updateOutput();
             }
-        })
+        });
 
         let phoneInput = document.createElement("input");
         phoneInput.classList.add("bux-input");

@@ -1,17 +1,18 @@
 import { InputModelFactory } from "./InputModelFactory";
 import { BasicInput } from "./model/BasicInput";
 
-console.log("bux.js loaded");
+console.log("bux.js loading...");
 
 onReady(() => {
     let inputs = document.querySelectorAll("input");
     let inputModels: Array<BasicInput> = [];
-    console.log("inputs", inputs);
-
+    
     inputs.forEach((input) => {
         inputModels.push(InputModelFactory.build(input));
     });
     convertElemens(inputModels);
+
+    console.log("bux.js loaded");
 });
 
 function convertElemens(inputModels: any) {

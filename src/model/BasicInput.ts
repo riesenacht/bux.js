@@ -13,11 +13,11 @@ export class BasicInput {
         return div;
     }
 
-    getInitialElement() {
+    protected getInitialElement() {
         return this.initialElement;
     }
 
-    getElement() {
+    protected getElement() {
         return this.element;
     }
 

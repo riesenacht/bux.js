@@ -9,7 +9,7 @@ export class BasicInput {
 
     getNewHtml(): HTMLElement {
         let div = document.createElement("div");
-        div.innerHTML = "Replaced " + this.element.outerHTML;
+        div.innerHTML = "Not Replaced " + this.element.outerHTML;
         return div;
     }
 

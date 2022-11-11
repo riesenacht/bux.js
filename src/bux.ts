@@ -17,13 +17,23 @@ onReady(() => {
 
 function convertElemens(inputModels: any) {
     inputModels.forEach((inputModel: BasicInput) => {
-        let html = inputModel.getNewHtml();
-        inputModel.getInitialElement().replaceWith(html);
+        let htmlElement = inputModel.getNewHtml();
+        
+        // Only decorate bux.js-elements in dev mode
+        if(Object.getOwnPropertyDescriptor(window, 'BUXJS_DEV')?.value === true && htmlElement !== inputModel.getInitialElement()) {
+            decorate(htmlElement);
+        }
+        
+        inputModel.getInitialElement().replaceWith(htmlElement);
 
         onReady(() => {
             inputModel.setListeners();
         });
     });
+}
+
+function decorate(element: HTMLElement) {
+    element.classList.add("bux.js");
 }
 
 function onReady(fn: EventListener) {

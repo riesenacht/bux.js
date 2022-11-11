@@ -6,65 +6,325 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bux.js</title>
 
+    <!-- include skeleton framework and customize it (not part of bux.js, only used to make the example more pretty)-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- End of include skeleton framework -->
+
+    <!--- BUX.JS DEVELOPMENT MODE -->
+    <script>
+        window.BUXJS_DEV = true;
+    </script>
+    <!--- END BUX.JS DEVELOPMENT MODE -->
+
     <script src="build/bux.js"></script>
 </head>
 <body>
-    <h1>Bux.js Demo</h1>
+    <div class="section hero">
+        <div class="container">
+            <h1 class="hero-heading">Bux.js Demo</h1>
+            <p>(a green box indicates that the element has been replaced)</p>
+        </div>
+    </div>
 
-    <form>
-        <input type="button">
-        <input type="checkbox">
-        <input type="color">
-        <input type="date">
-        <input type="date">
-        <input type="datetime">
-        <input type="datetime-local">
-        <input type="email">
-        <input type="file">
-        <input type="hidden">
-        <input type="image">
-        <input type="month">
-        <input type="number" placeholder="Here comes a number" name="my-number">
-        <input type="number" min="2.5" max="50" step="0.1" placeholder="Here comes a number between 2.5 and 50" name="my-min-max-number">
-        <input type="password">
-        <input type="radio">
-        <input type="range">
-        <input type="reset">
-        <input type="search">
-        <input type="submit">
-        <input type="tel" min="0310000000" max="0319999999">
-        <input type="text">
-        <input type="time">
-        <input type="url">
-        <input type="week">
-        <textarea></textarea>
-        <label>Label</label>
-        <select>
-            <option value="1">Value 1</option>
-            <option value="2">Value 2</option>
-        </select>
-        <select multiple>
-            <option>Multiple 1</option>
-            <option>Multiple 2</option>
-        </select>
-        <button>Button</button>
-        <fieldset>Fieldset</fieldset>
-        <legend>Legend</legend>
-        <datalist>Datalist</datalist>
-        <output>Output</output>
-        <optgroup>Optgroup?</optgroup>
-    </form>
-
-    <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-        }
-        form {
-            width: 80%;
-            display: flex;
-            flex-direction: column;
-        }
-    </style>
+    <div class="section">
+        <div class="container">
+            <form class="u-full-width">
+                <div class="row">
+                    <div class="one-half column">
+                        <h2 class="section-heading">Input Button</h2>
+                    </div>
+                    <div class="one-half column">
+                        <input type="button" class="button-primary" value="Input Button">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-half column">
+                        <h2 class="section-heading">Checkbox</h2>
+                    </div>
+                    <div class="one-half column">
+                        <label>
+                            <input type="checkbox">
+                            <span class="label-body">Radio Option 1</span>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <span class="label-body">Radio Option 2</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-half column">
+                        <h2 class="section-heading">Color</h2>
+                    </div>
+                    <div class="one-half column">
+                        <input type="color">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-half column">
+                        <h2 class="section-heading">Date</h2>
+                    </div>
+                    <div class="one-half column">
+                        <input type="date">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-half column">
+                        <h2 class="section-heading">Datetime</h2>
+                    </div>
+                    <div class="one-half column">
+                        <input type="datetime">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-half column">
+                        <h2 class="section-heading">Datetime Local</h2>
+                    </div>
+                    <div class="one-half column">
+                        <input type="datetime-local">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-half column">
+                        <h2 class="section-heading">Email</h2>
+                    </div>
+                    <div class="one-half column">
+                        <input type="email">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-half column">
+                        <h2 class="section-heading">File</h2>
+                    </div>
+                    <div class="one-half column">
+                        <input type="file">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-half column">
+                        <h2 class="section-heading">Hidden</h2>
+                    </div>
+                    <div class="one-half column">
+                        <input type="hidden">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-half column">
+                        <h2 class="section-heading">Image</h2>
+                    </div>
+                    <div class="one-half column">
+                        <input type="image">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-half column">
+                        <h2 class="section-heading">Month</h2>
+                    </div>
+                    <div class="one-half column">
+                        <input type="month">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-half column">
+                        <h2 class="section-heading">Number</h2>
+                    </div>
+                    <div class="one-half column">
+                        <input type="number" placeholder="Here comes a number" name="my-number">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-half column">
+                        <h2 class="section-heading">Number Min Max Step</h2>
+                    </div>
+                    <div class="one-half column">
+                        <input type="number" min="2.5" max="50" step="0.1" placeholder="Here comes a number between 2.5 and 50" name="my-min-max-number">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-half column">
+                        <h2 class="section-heading">Password</h2>
+                    </div>
+                    <div class="one-half column">
+                        <input type="password">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-half column">
+                        <h2 class="section-heading">Radio Input</h2>
+                    </div>
+                    <div class="one-half column">
+                        <label>
+                            <input type="radio">
+                            <span class="label-body">Radio Option 1</span>
+                        </label>
+                        <label>
+                            <input type="radio">
+                            <span class="label-body">Radio Option 2</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-half column">
+                        <h2 class="section-heading">Range</h2>
+                    </div>
+                    <div class="one-half column">
+                        <input type="range">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-half column">
+                        <h2 class="section-heading">Reset</h2>
+                    </div>
+                    <div class="one-half column">
+                        <input type="reset">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-half column">
+                        <h2 class="section-heading">Search</h2>
+                    </div>
+                    <div class="one-half column">
+                        <input type="search">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-half column">
+                        <h2 class="section-heading">Submit</h2>
+                    </div>
+                    <div class="one-half column">
+                        <input type="submit" class="button-primary" value="Input Submit">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-half column">
+                        <h2 class="section-heading">Telephone</h2>
+                    </div>
+                    <div class="one-half column">
+                        <input type="tel" min="0310000000" max="0319999999">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-half column">
+                        <h2 class="section-heading">Text</h2>
+                    </div>
+                    <div class="one-half column">
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-half column">
+                        <h2 class="section-heading">Time</h2>
+                    </div>
+                    <div class="one-half column">
+                        <input type="time">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-half column">
+                        <h2 class="section-heading">URL</h2>
+                    </div>
+                    <div class="one-half column">
+                        <input type="url">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-half column">
+                        <h2 class="section-heading">Week</h2>
+                    </div>
+                    <div class="one-half column">
+                        <input type="week">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-half column">
+                        <h2 class="section-heading">Textarea</h2>
+                    </div>
+                    <div class="one-half column">
+                        <textarea></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-half column">
+                        <h2 class="section-heading">Label</h2>
+                    </div>
+                    <div class="one-half column">
+                        <label>Label</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-half column">
+                        <h2 class="section-heading">Select</h2>
+                    </div>
+                    <div class="one-half column">
+                        <select>
+                            <option value="1">Value 1</option>
+                            <option value="2">Value 2</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-half column">
+                        <h2 class="section-heading">Select multiple</h2>
+                    </div>
+                    <div class="one-half column">
+                        <select multiple>
+                            <option>Multiple 1</option>
+                            <option>Multiple 2</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-half column">
+                        <h2 class="section-heading">Button</h2>
+                    </div>
+                    <div class="one-half column">
+                        <button class="button-primary">Button</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-half column">
+                        <h2 class="section-heading">Fieldset</h2>
+                    </div>
+                    <div class="one-half column">
+                        <fieldset>Fieldset</fieldset>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-half column">
+                        <h2 class="section-heading">Legend</h2>
+                    </div>
+                    <div class="one-half column">
+                        <legend>Legend</legend>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-half column">
+                        <h2 class="section-heading">Datalist</h2>
+                    </div>
+                    <div class="one-half column">
+                        <datalist>Datalist</datalist>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-half column">
+                        <h2 class="section-heading">Output</h2>
+                    </div>
+                    <div class="one-half column">
+                        <output>Output</output>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-half column">
+                        <h2 class="section-heading">Optgroup</h2>
+                    </div>
+                    <div class="one-half column">
+                        <optgroup>Optgroup</optgroup>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
 </body>
 </html>

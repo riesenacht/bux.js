@@ -8,9 +8,7 @@ export class BasicInput {
     }
 
     getNewHtml(): HTMLElement {
-        let div = document.createElement("div");
-        div.innerHTML = "Not Replaced " + this.element.outerHTML;
-        return div;
+        return this.element;
     }
 
     getInitialElement() {
